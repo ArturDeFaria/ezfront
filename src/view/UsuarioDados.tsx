@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Usuario } from "../model/Usuario";
 import UsuarioRepositorio from "../model/UsuarioRepositorio";
-import { useNavigate } from "react-router-dom";
+
 
 function FormUsuario() {
     const [id] = useState(undefined);
@@ -12,14 +12,14 @@ function FormUsuario() {
     const [cadastrador, setCadastrador] = useState(false);
 
     const repo = new UsuarioRepositorio();
-    const navegate = useNavigate();
+    
 
     const addUsuario = (evt: SubmitEvent) => {
         evt.preventDefault();
         const p = new Usuario(id, nome, cpf, email, cadastrador, senha);
         console.log(p);
         repo.adicionar(p).then(_ => {
-            navegate('/listarUsuarios', { replace: true });
+            location.reload();
         })
     }
 
