@@ -27,33 +27,33 @@ function FormUsuario() {
     return (
         //@ts-ignore
         <form className="form bg-primary bg-opacity-75 fs-5 p-4" onSubmit={updateUsuario}>
-
-            {/* Hidden ID field (not required or labeled) */}
             <label className="form-label" hidden={true}>Id</label>
             <input className="form-control fs-5" hidden={true} type="number" value={id}
-                // @ts-ignore (if necessary)
+                //@ts-ignore
                 onChange={(e) => setId(e.target.value)} />
-
             <label className="form-label">Nome</label>
             <input className="form-control fs-5" defaultValue={`${nome}`}
-                onChange={(e) => setNome(e.target.value)}
-                required aria-label="Nome do usuário" />  <label className="form-label">Cpf</label>
+                onChange={(e) => setNome(e.target.value)} />
+
+            <label className="form-label">Cpf</label>
             <input className="form-control fs-5" defaultValue={`${cpf}`}
-                onChange={(e) => setCpf(e.target.value)}
-                required aria-label="CPF do usuário" />  <label className="form-label">E-Mail</label>
+                onChange={(e) => setCpf(e.target.value)} />
+
+            <label className="form-label">E-Mail</label>
             <input className="form-control fs-5" type="email" defaultValue={`${email}`}
-                onChange={(e) => setEmail(e.target.value)}
-                required aria-label="E-mail do usuário" />  <label className="form-label">Senha</label>
+                onChange={(e) => setEmail(e.target.value)} />
+
+            <label className="form-label">Senha</label>
             <input className="form-control fs-5" type="password"
-                onChange={(e) => setSenha(e.target.value)}
-                required aria-label="Senha do usuário (opcional)" />  <label>Cadastrador</label>
+                onChange={(e) => setSenha(e.target.value)} />
+
+            <label>Cadastrador</label>
             <div className="form-check">
                 <input
                     className="form-check-input"
                     type="checkbox"
                     id="cadastradorSim"
-                    name="cadastrador"
-                    value={1}
+                    name="cadastrador" value={1}
                     checked={cadastrador === '1'}
                     onChange={(e) => setCadastrador(e.target.checked ? '1' : '0')}
                 />
