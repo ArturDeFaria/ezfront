@@ -4,6 +4,7 @@ import UsuarioRepositorio from '../model/UsuarioRepositorio';
 import { Link } from 'react-router-dom';
 import queryString from 'query-string';
 import { UsuarioService } from '../service/UsuarioService';
+import { useNavigate } from "react-router-dom";
 
 
 interface linhaProps {
@@ -15,11 +16,11 @@ function LinhaUsuario(props: linhaProps) {
   const UsuarioString: any = queryString.stringify(Usuario);
 
   const serv = new UsuarioService();
-
+  const navegate = useNavigate();
 
   const excluir = (id: number) => {
     serv.excluir(id).then(_ => {
-      location.reload();
+      navegate("/");
     });
 
   }
@@ -62,7 +63,8 @@ function TableUsuarios() {
     <table className="table table-striped">
       <thead className="table-dark bg-dark fs-4">
         <tr>
-          <th>Codigo</th><th>Nome</th><th>CPF</th><th>E-mail</th><th>Cadastrador</th><th></th><th></th>
+        <th>Codigo</th><th>Nome</th><th>CPF</th><th>E-mail</th><th>Cadastrador</th><th></th>
+        <th><Link className="btn btn-outline-primary btn-light btn-lg rounded-circle" to="/inserirUsuario"><h2>+</h2></Link></th>
         </tr>
       </thead>
       <tbody className='table-primary'>
