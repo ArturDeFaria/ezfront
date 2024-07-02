@@ -4,7 +4,7 @@ import { Usuario } from "../model/Usuario";
 export class UsuarioService {
 
     private client = axios.create({
-        baseURL: "http://127.0.0.1:3000/"
+        baseURL: "https://ezback-production.up.railway.app/"
     });
 
     obterTodos = async (): Promise<Usuario[]> => {
