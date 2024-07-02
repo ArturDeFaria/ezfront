@@ -1,8 +1,8 @@
 export function Footer(){
     return(
         <footer className="mt-1 Pb-1" style={{backgroundColor: '#1679FF'}}>
-            <p className="fs-4 text-center fw-bolder m-0">ATIVIDADE AVALIATIVA DB II</p>
-            <p className="fs-5 text-center m-0 font-monospace">Artur de Faria - 1200103025 | Júlia Oliveira da Silva - 1180201161 | Monize Pereira da Silva - 1200103325</p>
+            <p className="fs-4 text-center fw-bolder m-0"></p>
+            <p className="fs-5 text-center m-0 font-monospace">© 2024 Ez Logistic - Soluções Logísticas de Qualidade Superior. Sua Logística, Nossa Prioridade.</p>
         </footer>
     );
 }

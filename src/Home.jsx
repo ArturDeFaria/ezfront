@@ -8,7 +8,7 @@ import i_git from "./assets/gitdok.png";
 export function Home() {
 	return (
 		<main>
-			<h1 className="text-center pt-4">Atividade Avaliativa 2 - Frontend - Poo2 x DB2</h1>
+			<h1 className="text-center pt-4">EZ LOGICS</h1>
 			{/* ------------Carousel---------- */}
 			<div id="carouselExampleCaptions" className="carousel slide carousel-fade mx-auto mt-4 mb-4 bg-dark bg-opacity-75">
 				<div className="carousel-indicators">
@@ -17,8 +17,7 @@ export function Home() {
 					<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
 					<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
 					<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
-					<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
-					<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
+					
 				</div>
 				<div className="carousel-inner">
 					<div className="carousel-item active">
@@ -33,12 +32,7 @@ export function Home() {
 					<div className="carousel-item">
 					<img src={i_rest} className="d-block mx-auto"  height="300" alt="..." />
 					</div>
-					<div className="carousel-item">
-					<img src={i_spring} className="d-block mx-auto"  height="300" alt="..." />						
-					</div>
-					<div className="carousel-item">
-					<img src={i_iback} className="d-block mx-auto"  height="300" alt="..." />
-					</div>
+					
 					<div className="carousel-item">
 					<img src={i_git} className="d-block mx-auto"  height="300" alt="..." />
 					</div>
@@ -57,29 +51,29 @@ export function Home() {
 				<table className="table table-striped text-center align-middle m-0">
 					<thead className="table-dark">
 						<tr className="h2 ">
-							<td colSpan="2">POO II - App Web</td>
+							<td colSpan="2"></td>
 						</tr>
 					</thead>
 					<tbody className="table-primary fs-5">
 						<tr>
-							<td>Artur de Faria</td>
-							<td>1200103025</td>
+							<td></td>
+							<td></td>
 						</tr>
 						<tr>
-							<td>Breno Matos</td>
-							<td>1210102032</td>
+							<td> </td>
+							<td></td>
 						</tr>
 						<tr>
-							<td>Júlia Oliveira da Silva</td>
-							<td>1180201161</td>
+							<td></td>
+							<td></td>
 						</tr>
 						<tr>
-							<td>Leandro Alves Santos</td>
-							<td>1200200950</td>
+							<td></td>
+							<td></td>
 						</tr>
 						<tr>
-							<td>Wellington Junior Rodrigues da Silva</td>
-							<td>1200101333</td>
+							<td></td>
+							<td></td>
 						</tr>
 					</tbody>
 				</table>

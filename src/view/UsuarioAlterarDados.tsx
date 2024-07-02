@@ -19,7 +19,7 @@ function FormUsuario() {
     const updateUsuario = (evt: SubmitEvent) => {
         evt.preventDefault();
         //@ts-ignore
-        const p = new Usuario(id, nome, cpf, email, cadastrador,senha);
+        const p = new Usuario(id, nome, cpf, email, cadastrador, senha);
         repo.alterar(p).then(_ => {
             navegation('/listarUsuarios', { replace: true });
         });
@@ -27,10 +27,10 @@ function FormUsuario() {
     return (
         //@ts-ignore
         <form className="form bg-primary bg-opacity-75 fs-5 p-4" onSubmit={updateUsuario}>
-            <label className="form-label">Id</label>
-            <input className="form-control fs-5" hidden={true} type="number" value={id} 
-                  //@ts-ignore
-                  onChange={(e) => setId(e.target.value)}/>
+            <label className="form-label" hidden={true}>Id</label>
+            <input className="form-control fs-5" hidden={true} type="number" value={id}
+                //@ts-ignore
+                onChange={(e) => setId(e.target.value)} />
             <label className="form-label">Nome</label>
             <input className="form-control fs-5" defaultValue={`${nome}`}
                 onChange={(e) => setNome(e.target.value)} />
@@ -48,32 +48,17 @@ function FormUsuario() {
                 onChange={(e) => setSenha(e.target.value)} />
 
             <label>Cadastrador</label>
-            <div className="form-check"> {/* Option 1: Radio Buttons */}
-                <input
-                    className="form-check-input"
-                    type="radio"
-                    id="cadastradorSim"
-                    name="cadastrador"
-                    value={true}
-                    checked={cadastrador === true}
-                    onChange={(e) => setCadastrador(true)}
-                />
-                <label className="form-check-label" htmlFor="cadastradorSim">
-                    Sim
-                </label>
-            </div>
             <div className="form-check">
                 <input
                     className="form-check-input"
-                    type="radio"
-                    id="cadastradorNao"
-                    name="cadastrador"
-                    value={false}
-                    checked={cadastrador === false}
-                    onChange={(e) => setCadastrador(false)}
+                    type="checkbox"
+                    id="cadastradorSim"
+                    name="cadastrador" value={1}
+                    checked={cadastrador === '1'}
+                    onChange={(e) => setCadastrador(e.target.checked ? '1' : '0')}
                 />
-                <label className="form-check-label" htmlFor="cadastradorNao">
-                    Não
+                <label className="form-check-label" htmlFor="cadastradorSim">
+                    Sim
                 </label>
             </div>
 

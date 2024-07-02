@@ -37,7 +37,7 @@ function LinhaUsuario(props: linhaProps){
         </td>
         <td>
           
-          <button onClick={(evt)=>{
+          <button onClick={()=>{
             //@ts-ignore
             excluir(Usuario.id);}}
             className="btn btn-danger fs-5 fs- w-100">

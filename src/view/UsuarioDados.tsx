@@ -4,7 +4,7 @@ import UsuarioRepositorio from "../model/UsuarioRepositorio";
 import { useNavigate } from "react-router-dom";
 
 function FormUsuario() {
-    const [id, setId] = useState(undefined);
+    const [id] = useState(undefined);
     const [nome, setNome] = useState("");
     const [cpf, setCpf] = useState("");
     const [email, setEmail] = useState("");
@@ -40,32 +40,16 @@ function FormUsuario() {
             <input className="form-control fs-5" type="password"
                 onChange={(e) => setSenha(e.target.value)} />
             <label>Cadastrador</label>
-            <div className="form-check"> {/* Option 1: Radio Buttons */}
+            <div className="form-check"> {/* Option 1: Checkboxes */}
                 <input
                     className="form-check-input"
-                    type="radio"
+                    type="checkbox"
                     id="cadastradorSim"
-                    name="cadastrador"
-                    value={true}
-                    checked={cadastrador === true}
-                    onChange={(e) => setCadastrador(true)}
+                    name="cadastrador" value={1}
+                    checked={cadastrador} onChange={(e) => setCadastrador(e.target.checked)}
                 />
                 <label className="form-check-label" htmlFor="cadastradorSim">
                     Sim
-                </label>
-            </div>
-            <div className="form-check">
-                <input
-                    className="form-check-input"
-                    type="radio"
-                    id="cadastradorNao"
-                    name="cadastrador"
-                    value={false}
-                    checked={cadastrador === false}
-                    onChange={(e) => setCadastrador(false)}
-                />
-                <label className="form-check-label" htmlFor="cadastradorNao">
-                    Não
                 </label>
             </div>
             <button className="btn btn-lg btn-primary bg-black  mt-4" type="submit">Adicionar</button>
