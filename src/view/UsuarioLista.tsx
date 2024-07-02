@@ -62,7 +62,8 @@ function TableUsuarios() {
     <table className="table table-striped">
       <thead className="table-dark bg-dark fs-4">
         <tr>
-          <th>Codigo</th><th>Nome</th><th>CPF</th><th>E-mail</th><th>Cadastrador</th><th></th><th></th>
+          <th>Codigo</th><th>Nome</th><th>CPF</th><th>E-mail</th><th>Cadastrador</th><th></th>
+          <th><Link className="btn btn-outline-primary btn-light btn-lg rounded-circle" to="/inserirUsuario"><h2>+</h2></Link></th>
         </tr>
       </thead>
       <tbody className='table-primary'>
